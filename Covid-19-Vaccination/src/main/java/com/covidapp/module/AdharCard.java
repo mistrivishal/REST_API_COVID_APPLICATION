@@ -18,4 +18,5 @@ public class AdharCard {
 	
 //	private String fingerprints;
 //	private String irisscan;
+	
 }
