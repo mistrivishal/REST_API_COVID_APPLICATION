@@ -1,5 +1,7 @@
 package com.covidapp.module;
 
+import javax.persistence.CascadeType;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
@@ -15,7 +17,11 @@ public class Vaccine {
 	private String vaccineName;
 	private String Description;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private VaccineCount vc;
+	
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private VaccinationRegistration vacReg;
 	
 }

@@ -2,14 +2,8 @@ package com.covidapp.module;
 
 import java.time.LocalDate;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -50,6 +44,9 @@ public class IdCard {
 	
 	@Embedded
 	private AdharCard adhar;
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	private Member member;
 
 
 }
