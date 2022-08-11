@@ -1,0 +1,21 @@
+package com.covidapp.servicelayer;
+
+import java.util.List;
+
+import com.covidapp.module.Vaccine;
+
+public interface VaccineService {
+		
+	public List<Vaccine> allVaccine();
+	
+	public Vaccine getVaccinebyName(String name);
+	
+	public Vaccine getVaccineId(int vaccineid);
+	
+	public Vaccine addVaccine(Vaccine vaccine);
+	
+	public Vaccine updateVaccine(Vaccine vaccine);
+	
+	public boolean deleteVaccine(Vaccine vaccine);
+	
+}
