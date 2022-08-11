@@ -18,6 +18,7 @@ import lombok.*;
 @NoArgsConstructor
 public class VaccinationRegistration {
 	
+	@Id
 	@NotNull(message = "Mobile field should not be empty")
 	@Pattern(regexp = "^[789]\\d{9}$", message = "Invalid Mobile No.")
 	private long mobileno;
@@ -26,6 +27,7 @@ public class VaccinationRegistration {
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	@JsonFormat(pattern = "MM/dd/yyyy")
 	private LocalDate dateofregistration;
+	
 	
 	@OneToMany(mappedBy = "vacReg", cascade = CascadeType.ALL)
 	private List<Member> members;

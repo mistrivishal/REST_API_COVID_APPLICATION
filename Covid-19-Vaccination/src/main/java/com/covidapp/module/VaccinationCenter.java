@@ -1,5 +1,6 @@
 package com.covidapp.module;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +21,8 @@ public class VaccinationCenter {
 		@GeneratedValue(strategy = GenerationType.AUTO)
 		private int code;
 		private String centername;
+		
+		@Embedded
 		private Address address; 
 		
 		@OneToOne

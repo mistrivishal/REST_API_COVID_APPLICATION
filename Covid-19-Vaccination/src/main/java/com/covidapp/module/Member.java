@@ -17,6 +17,10 @@ import lombok.*;
 @NoArgsConstructor
 public class Member {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer mid;
+	
 	@NotNull
 	private Boolean dose1status;
 
@@ -34,7 +38,7 @@ public class Member {
 	private LocalDate dose2date;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	@JoinColumn(name = "IdCard")
 	private IdCard idcard;
 
 	@ManyToOne(cascade = CascadeType.ALL)
