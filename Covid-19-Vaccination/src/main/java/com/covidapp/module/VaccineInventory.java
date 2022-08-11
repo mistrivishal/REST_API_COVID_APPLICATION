@@ -25,17 +25,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class VaccineInventory {
-<<<<<<< HEAD
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer invid;
 	
-=======
-	
 	@NotNull(message = "Date field should not be empty")
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	@JsonFormat(pattern = "MM/dd/yyyy")
->>>>>>> d81ea913e7159de54b19e16cc4b9e3f36339dcaf
+
 	private LocalDate date;
 	
 	@OneToOne

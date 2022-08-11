@@ -25,11 +25,8 @@ public class VaccinationCenter {
 		@Pattern(regexp="^[A-Z][a-z]*", message = "Invalid city name - should not contain special characters.")
 		private String centername;
 		
-<<<<<<< HEAD
 		@Embedded
-=======
 		@Pattern(regexp="^[A-Z][a-z]*", message = "Invalid city name - should not contain special characters.")
->>>>>>> d81ea913e7159de54b19e16cc4b9e3f36339dcaf
 		private Address address; 
 		
 		@OneToOne
