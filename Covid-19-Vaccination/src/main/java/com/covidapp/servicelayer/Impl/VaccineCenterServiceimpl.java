@@ -15,6 +15,7 @@ import com.covidapp.servicelayer.VaccineCenterService;
 
 @Service
 public class VaccineCenterServiceImpl implements VaccineCenterService {
+	
 	@Autowired
 	VaccineCenterDao Vcdao;
 

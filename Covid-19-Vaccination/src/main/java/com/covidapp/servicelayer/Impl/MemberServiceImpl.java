@@ -1,6 +1,7 @@
 package com.covidapp.servicelayer.Impl;
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class MemberServiceImpl implements MemberService {
 
 		for (Member member : members) {
 
-			if (member.getIdcard().getId() == idCardId) {
+			if (member.getIdcard().getIdCardid() == idCardId) {
 				return member;
 			}
 		}

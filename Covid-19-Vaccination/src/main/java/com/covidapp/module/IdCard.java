@@ -21,7 +21,7 @@ public class IdCard {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private Integer idCardid;
 	
 	@NotNull(message = "Name field should not be empty..")
 	@Size(min=3,max=255, message = "Your name should contain minimum 3 letters and max 255.")
