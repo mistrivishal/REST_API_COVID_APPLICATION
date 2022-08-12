@@ -20,7 +20,7 @@ public class VaccineServiceImpl implements VaccineService {
 	}
 
 	@Override
-	public Vaccine getVaccineId(int vaccineid) {
+	public Vaccine getVaccineId(Integer vaccineid) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -38,7 +38,7 @@ public class VaccineServiceImpl implements VaccineService {
 	}
 
 	@Override
-	public boolean deleteVaccine(Vaccine vaccine) {
+	public Boolean deleteVaccine(Vaccine vaccine) {
 		// TODO Auto-generated method stub
 		return false;
 	}

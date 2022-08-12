@@ -14,12 +14,13 @@ public class VaccineInventoryServiceImpl implements VaccineInventoryService {
 
 	@Override
 	public List<VaccineInventory> allVaccineInventory() {
-		// TODO Auto-generated method stub
+		
 		return null;
+		
 	}
 
 	@Override
-	public VaccineInventory getVaccineInventorybyCenter(int code) {
+	public VaccineInventory getVaccineInventorybyCenter(Integer code) {
 		// TODO Auto-generated method stub
 		return null;
 	}

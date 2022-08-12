@@ -10,7 +10,7 @@ public interface VaccineService {
 	
 	public Vaccine getVaccinebyName(String name);
 	
-	public Vaccine getVaccineId(int vaccineid);
+	public Vaccine getVaccineId(Integer vaccineid);
 	
 	public Vaccine addVaccine(Vaccine vaccine);
 	

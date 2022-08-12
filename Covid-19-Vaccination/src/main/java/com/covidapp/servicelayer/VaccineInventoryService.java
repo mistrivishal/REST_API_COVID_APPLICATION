@@ -10,7 +10,7 @@ public interface VaccineInventoryService {
 
 	public List<VaccineInventory> allVaccineInventory();
 	
-	public VaccineInventory getVaccineInventorybyCenter(int code);
+	public VaccineInventory getVaccineInventorybyCenter(Integer code);
 	
 	public VaccineInventory addVaccineCount(VaccineInventory vaccineinventory);
 	
