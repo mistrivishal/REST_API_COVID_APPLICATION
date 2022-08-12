@@ -46,9 +46,9 @@ public class VaccineCenterServiceImpl implements VaccineCenterService {
 
 	@Override
 	public VaccinationCenter updateVaccinationCenter(VaccinationCenter center) {
-		VaccinationCenter vaccinationcenter = Vcdao.getById(center.getCenterCcode());
+		Optional<VaccinationCenter> vaccinationcenter = Vcdao.findById(center.getCenterCcode());
 		
-		if(vaccinationcenter==null) {
+		if(vaccinationcenter.isEmpty()) {
 			throw new CenterException("Center Not Found");
 		}
 		else {
