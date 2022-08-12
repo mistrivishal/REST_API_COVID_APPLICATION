@@ -15,10 +15,8 @@ public interface VaccineCenterService {
 	
 	public VaccinationCenter updateVaccinationCenter(VaccinationCenter center)throws CenterException;
 	
-<<<<<<< HEAD
 	public Boolean deleteVaccinatioinCenter(VaccinationCenter center);
-=======
+
 	public Boolean deleteVaccinatioinCenter(VaccinationCenter center)throws CenterException;
->>>>>>> d8695e35bc962c94db9b6f04c753e67b21f2de67
 	
 }
