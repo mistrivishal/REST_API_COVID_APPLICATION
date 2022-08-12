@@ -1,9 +1,10 @@
-package com.covidapp.servicelayer;
+package com.covidapp.servicelayer.Impl;
 
 import java.util.List;
 
 import com.covidapp.module.Member;
 import com.covidapp.module.VaccinationRegistration;
+import com.covidapp.servicelayer.VaccineRegistrationService;
 
 public class VaccineRegistrationServiceimpl implements VaccineRegistrationService{
 
