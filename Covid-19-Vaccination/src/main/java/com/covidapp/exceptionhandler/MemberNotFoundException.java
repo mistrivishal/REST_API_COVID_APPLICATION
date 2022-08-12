@@ -1,6 +1,7 @@
 package com.covidapp.exceptionhandler;
 
 
+@SuppressWarnings("serial")
 public class MemberNotFoundException extends RuntimeException{
 
 	public MemberNotFoundException() {

@@ -1,5 +1,6 @@
 package com.covidapp.module;
 
+import javax.persistence.Embeddable;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
@@ -7,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Embeddable
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,5 +28,5 @@ public class Address {
 	
 	@NotBlank(message = "pincode field should not be empty")
 	@Pattern(regexp="^[1-9][0-9]{5}$", message = "Iavalid pincode..")
-	private String pincde;
+	private String pincode;
 }

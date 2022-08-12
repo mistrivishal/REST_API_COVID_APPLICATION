@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.covidapp.exceptionhandler.DuplicateIdException;
 import com.covidapp.exceptionhandler.IdCardNotFoundException;
+import com.covidapp.module.Address;
 import com.covidapp.module.AdharCard;
 import com.covidapp.module.IdCard;
 import com.covidapp.module.PanCard;
@@ -52,10 +53,12 @@ public class IdCardServiceImpl implements IdCardService {
 
 		for (IdCard id : idCards) {
 			if (id.getAdhar().getAdharNo() == idCard.getAdhar().getAdharNo()) {
-				throw new DuplicateIdException("Idcard Already Exists with adharNo: ");
+				throw new DuplicateIdException("Idcard Already Exists with adharNo:"+idCard.getAdhar().getAdharNo());
 			}
 		}
-
+		
+//		new Address(idCard.getAddress().getAddress(),idCard.getAddress().getCity(),idCard.getAddress().getState(),
+//				idCard.getAddress().getPincde());
 		return idDao.save(idCard);
 
 	}

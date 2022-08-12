@@ -1,5 +1,6 @@
 package com.covidapp.exceptionhandler;
 
+@SuppressWarnings("serial")
 public class CenterException extends RuntimeException{
 
 	public CenterException() {
