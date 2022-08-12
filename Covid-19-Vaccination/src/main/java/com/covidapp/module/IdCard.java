@@ -45,7 +45,7 @@ public class IdCard {
 	@Embedded
 	private AdharCard adhar;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "idcard")
 	private Member member;
 
 

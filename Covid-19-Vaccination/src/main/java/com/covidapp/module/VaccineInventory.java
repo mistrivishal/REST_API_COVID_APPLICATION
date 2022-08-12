@@ -5,8 +5,6 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -27,18 +25,15 @@ import lombok.NoArgsConstructor;
 public class VaccineInventory {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer invid;
-	
 	@NotNull(message = "Date field should not be empty")
 	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	@JsonFormat(pattern = "MM/dd/yyyy")
-
 	private LocalDate date;
 	
-	@OneToOne
-	private VaccinationCenter vac;	
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "VaccineInventory")
+	private VaccinationCenter VaccinationCenter;	
 	
-	@OneToMany(mappedBy = "vacReg",cascade = CascadeType.ALL)
-	private List<Vaccine> vaccines;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "vaccineInventory")
+	private List<VaccineCount> vaccineCounts;
+	
 }

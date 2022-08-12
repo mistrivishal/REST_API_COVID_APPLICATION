@@ -29,6 +29,6 @@ public class VaccinationRegistration {
 	private LocalDate dateofregistration;
 	
 	
-	@OneToMany(mappedBy = "vacReg", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "vaccinationReg", cascade = CascadeType.ALL)
 	private List<Member> members;
 }

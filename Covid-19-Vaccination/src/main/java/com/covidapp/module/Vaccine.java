@@ -1,9 +1,12 @@
 package com.covidapp.module;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.Pattern;
 
@@ -20,17 +23,19 @@ public class Vaccine {
 	@Id	
 	private int vaccineId;
 	
-	@Pattern(regexp="^[A-Z][a-z]*", message = "Invalid city name - should not contain special characters.")
+	@Pattern(regexp="^[A-Z][a-z][0-9]*", message = "Invalid city name - should not contain special characters.")
 	private String vaccineName;
 	
-	@Pattern(regexp="^[A-Z][a-z]*", message = "Invalid city name - should not contain special characters.")
+	@Pattern(regexp="^[A-Z][a-z][0-9]*", message = "Invalid city name - should not contain special characters.")
 	private String Description;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	private VaccineCount vc;
-	
+	private VaccineCount vaccineCount;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	private VaccinationRegistration vacReg;
+	private VaccinationRegistration vaccinationReg;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "vaccine")
+	private List<Member> member;
 	
 }

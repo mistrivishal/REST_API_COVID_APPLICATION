@@ -1,6 +1,7 @@
 package com.covidapp.module;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -8,7 +9,6 @@ import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
 import lombok.*;
 
 @Entity
@@ -19,7 +19,7 @@ public class Member {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer mid;
+	private Integer memberId;
 	
 	@NotNull
 	private Boolean dose1status;
@@ -38,12 +38,14 @@ public class Member {
 	private LocalDate dose2date;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "IdCard")
 	private IdCard idcard;
 
 	@ManyToOne(cascade = CascadeType.ALL)
-	private VaccinationRegistration vacReg;
+	private VaccinationRegistration vaccinationReg;
 	
-	@OneToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Vaccine vaccine;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "member")
+	private List<Appointment> appointments;
 }
