@@ -11,8 +11,9 @@ public class VaccineInventoryServiceimpl implements VaccineInventoryService{
 
 	@Override
 	public List<VaccineInventory> allVaccineInventory() {
-		// TODO Auto-generated method stub
+		
 		return null;
+		
 	}
 
 	@Override
