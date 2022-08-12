@@ -1,13 +1,12 @@
 package com.covidapp.servicelayer.Impl;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.covidapp.module.Appointment;
+import com.covidapp.exceptionhandler.MemberNotFoundException;
 import com.covidapp.module.Member;
 import com.covidapp.repository.MembersDao;
 import com.covidapp.servicelayer.MemberService;

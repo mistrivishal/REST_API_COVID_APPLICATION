@@ -14,9 +14,8 @@ public class VaccineInventoryServiceImpl implements VaccineInventoryService {
 
 	@Override
 	public List<VaccineInventory> allVaccineInventory() {
-		
+		// TODO Auto-generated method stub
 		return null;
-		
 	}
 
 	@Override
@@ -40,7 +39,7 @@ public class VaccineInventoryServiceImpl implements VaccineInventoryService {
 	@Override
 	public Boolean deleteVaccineInventory(VaccineInventory vaccineinventory) {
 		// TODO Auto-generated method stub
-		return false;
+		return null;
 	}
 
 	@Override
@@ -54,5 +53,7 @@ public class VaccineInventoryServiceImpl implements VaccineInventoryService {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 
 }

@@ -63,16 +63,6 @@ public class VaccineCenterServiceImpl implements VaccineCenterService {
 	public Boolean deleteVaccinatioinCenter(VaccinationCenter center) {
 		// TODO Auto-generated method stub
 		return false;
-		Boolean b= false;
-		VaccinationCenter vaccinationcenter = Vcdao.getById(center.getCenterCcode());
-		
-		if(vaccinationcenter==null) {
-			throw new CenterException("Center Not Found");
-		}
-		else {
-		 Vcdao.delete(vaccinationcenter);
-		return true;
-		}
 	}
 
 }
