@@ -14,6 +14,6 @@ public interface VaccineCenterService {
 	
 	public VaccinationCenter updateVaccinationCenter(VaccinationCenter center);
 	
-	public boolean deleteVaccinatioinCenter(VaccinationCenter center);
+	public Boolean deleteVaccinatioinCenter(VaccinationCenter center);
 	
 }

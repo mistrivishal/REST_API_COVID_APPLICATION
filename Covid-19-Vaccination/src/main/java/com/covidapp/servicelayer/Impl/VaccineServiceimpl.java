@@ -5,7 +5,7 @@ import java.util.List;
 import com.covidapp.module.Vaccine;
 import com.covidapp.servicelayer.VaccineService;
 
-public class VaccineServiceimpl implements VaccineService{
+public class VaccineServiceImpl implements VaccineService {
 
 	@Override
 	public List<Vaccine> allVaccine() {

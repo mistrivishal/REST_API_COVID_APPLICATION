@@ -3,11 +3,14 @@ package com.covidapp.servicelayer.Impl;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.covidapp.module.Vaccine;
 import com.covidapp.module.VaccineInventory;
 import com.covidapp.servicelayer.VaccineInventoryService;
 
-public class VaccineInventoryServiceimpl implements VaccineInventoryService{
+@Service
+public class VaccineInventoryServiceImpl implements VaccineInventoryService {
 
 	@Override
 	public List<VaccineInventory> allVaccineInventory() {
@@ -34,7 +37,7 @@ public class VaccineInventoryServiceimpl implements VaccineInventoryService{
 	}
 
 	@Override
-	public boolean deleteVaccineInventory(VaccineInventory vaccineinventory) {
+	public Boolean deleteVaccineInventory(VaccineInventory vaccineinventory) {
 		// TODO Auto-generated method stub
 		return false;
 	}

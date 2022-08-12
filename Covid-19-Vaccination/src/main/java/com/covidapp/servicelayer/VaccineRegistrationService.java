@@ -17,5 +17,5 @@ public interface VaccineRegistrationService {
 	
 	public VaccinationRegistration updateVaccineRegistration(VaccinationRegistration vaccineregistration);
 	
-	public boolean deleteVaccineRegistration(VaccinationRegistration vaccineregistration);
+	public Boolean deleteVaccineRegistration(VaccinationRegistration vaccineregistration);
 }

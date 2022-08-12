@@ -45,9 +45,9 @@ public class Appointment {
 	private Boolean bookingstatus;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	VaccinationCenter vaccinationCenter;
+	private VaccinationCenter vaccinationCenter;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	Member member;
+	private Member member;
 	
 }

@@ -16,7 +16,7 @@ public interface VaccineInventoryService {
 	
 	public VaccineInventory updateVaccineInventory(VaccineInventory vaccineinventory);
 	
-	public boolean deleteVaccineInventory(VaccineInventory vaccineinventory);
+	public Boolean deleteVaccineInventory(VaccineInventory vaccineinventory);
 	
 	public List<VaccineInventory> getVaccineInventoryByDate(LocalDateTime date);
 	

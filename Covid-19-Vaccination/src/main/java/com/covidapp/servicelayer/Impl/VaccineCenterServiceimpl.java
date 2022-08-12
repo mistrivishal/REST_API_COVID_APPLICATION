@@ -11,19 +11,18 @@ import org.springframework.stereotype.Service;
 import com.covidapp.module.VaccinationCenter;
 import com.covidapp.repository.VaccineCenterDao;
 import com.covidapp.servicelayer.VaccineCenterService;
+
 @Service
-public class VaccineCenterServiceimpl implements VaccineCenterService{
+public class VaccineCenterServiceImpl implements VaccineCenterService {
 	@Autowired
 	VaccineCenterDao Vcdao;
-	
-	
+
 	@Override
 	public List<VaccinationCenter> allVaccineCenters() {
-		List<VaccinationCenter>list = Vcdao.findAll();
-		if(list!=null) {
-		return list;
-		}
-		else {
+		List<VaccinationCenter> list = Vcdao.findAll();
+		if (list != null) {
+			return list;
+		} else {
 			throw new CenterException("Center not found");
 		}
 	}
@@ -31,10 +30,9 @@ public class VaccineCenterServiceimpl implements VaccineCenterService{
 	@Override
 	public VaccinationCenter getVaccinationCenter(int code) {
 		Optional<VaccinationCenter> opt = Vcdao.findById(code);
-		if(opt.isPresent()) {
-				return opt.get();
-		}
-		else {
+		if (opt.isPresent()) {
+			return opt.get();
+		} else {
 			throw new CenterException("Center not found");
 		}
 	}
@@ -52,7 +50,7 @@ public class VaccineCenterServiceimpl implements VaccineCenterService{
 	}
 
 	@Override
-	public boolean deleteVaccinatioinCenter(VaccinationCenter center) {
+	public Boolean deleteVaccinatioinCenter(VaccinationCenter center) {
 		// TODO Auto-generated method stub
 		return false;
 	}

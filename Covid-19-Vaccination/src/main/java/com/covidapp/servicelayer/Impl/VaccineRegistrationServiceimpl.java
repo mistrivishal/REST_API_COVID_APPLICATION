@@ -2,11 +2,14 @@ package com.covidapp.servicelayer.Impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.covidapp.module.Member;
 import com.covidapp.module.VaccinationRegistration;
 import com.covidapp.servicelayer.VaccineRegistrationService;
 
-public class VaccineRegistrationServiceimpl implements VaccineRegistrationService{
+@Service
+public class VaccineRegistrationServiceImpl implements VaccineRegistrationService {
 
 	@Override
 	public List<VaccinationRegistration> allVaccineRegistration() {
@@ -39,7 +42,7 @@ public class VaccineRegistrationServiceimpl implements VaccineRegistrationServic
 	}
 
 	@Override
-	public boolean deleteVaccineRegistration(VaccinationRegistration vaccineregistration) {
+	public Boolean deleteVaccineRegistration(VaccinationRegistration vaccineregistration) {
 		// TODO Auto-generated method stub
 		return false;
 	}
