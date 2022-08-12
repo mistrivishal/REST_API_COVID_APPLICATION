@@ -48,12 +48,11 @@ public class Member {
 	@JsonFormat(pattern = "MM/dd/yyyy")
 	private LocalDate dose2date;
 	
-	@JsonIgnore
 	@OneToOne(cascade = CascadeType.ALL)
 	private IdCard idcard;
 
-	@JsonIgnore
-	@ManyToOne(cascade = CascadeType.ALL)
+//	@JsonIgnore
+	@OneToOne(cascade = CascadeType.ALL)
 	private VaccinationRegistration vaccinationReg;
 	
 	@JsonIgnore

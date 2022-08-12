@@ -7,7 +7,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.covidapp.exceptionhandler.DuplicateIdException;
 import com.covidapp.exceptionhandler.MemberNotFoundException;
+import com.covidapp.module.IdCard;
 import com.covidapp.module.Member;
 import com.covidapp.repository.MembersDao;
 import com.covidapp.servicelayer.MemberService;
@@ -62,9 +64,16 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public Member addMember(Member member) {
 
-		Member savedMember = mDao.save(member);
+		List<Member> members = mDao.findAll();
 
-		return savedMember;
+		for (Member mem : members) {
+			if (member.getIdcard().getAdhar().getAdharNo() == mem.getIdcard().getAdhar().getAdharNo()) {
+				throw new DuplicateIdException(
+						"Member Already Exists with adharNo:" + member.getIdcard().getAdhar().getAdharNo());
+			}
+		}
+
+		return mDao.save(member);
 	}
 
 	@Override

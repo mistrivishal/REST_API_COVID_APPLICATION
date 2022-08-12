@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.covidapp.module.IdCard;
+import com.covidapp.module.Member;
 import com.covidapp.servicelayer.IdCardService;
 import com.covidapp.servicelayer.MemberService;
 
@@ -26,5 +27,11 @@ public class exmapleController {
 	public IdCard saveIdcard(@Valid @RequestBody IdCard idCard) {
 		
 		return idService.addIdCard(idCard);
+	}
+	
+	@PostMapping("/savem")
+	public Member saveMember(@Valid @RequestBody Member member) {
+		
+		return mService.addMember(member);
 	}
 }
