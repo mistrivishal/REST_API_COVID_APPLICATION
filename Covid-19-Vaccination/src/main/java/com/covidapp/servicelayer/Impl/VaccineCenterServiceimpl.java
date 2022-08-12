@@ -61,10 +61,8 @@ public class VaccineCenterServiceImpl implements VaccineCenterService {
 
 	@Override
 	public Boolean deleteVaccinatioinCenter(VaccinationCenter center) {
-<<<<<<< HEAD
 		// TODO Auto-generated method stub
 		return false;
-=======
 		Boolean b= false;
 		VaccinationCenter vaccinationcenter = Vcdao.getById(center.getCenterCcode());
 		
@@ -75,7 +73,6 @@ public class VaccineCenterServiceImpl implements VaccineCenterService {
 		 Vcdao.delete(vaccinationcenter);
 		return true;
 		}
->>>>>>> d8695e35bc962c94db9b6f04c753e67b21f2de67
 	}
 
 }
