@@ -10,7 +10,7 @@ public interface VaccineCenterService {
 	
 	public VaccinationCenter getVaccinationCenter(int  code);
 	
-	public  VaccinationCenter addVaccinationCenter(int code);
+	public  VaccinationCenter addVaccinationCenter(VaccinationCenter center);
 	
 	public VaccinationCenter updateVaccinationCenter(VaccinationCenter center);
 	
