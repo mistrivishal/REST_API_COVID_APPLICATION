@@ -29,7 +29,7 @@ public class VaccineCenterServiceimpl implements VaccineCenterService{
 	}
 
 	@Override
-	public VaccinationCenter getVaccinationCenter(int code) {
+	public VaccinationCenter getVaccinationCenter(Integer code) {
 		Optional<VaccinationCenter> opt = Vcdao.findById(code);
 		if(opt.isPresent()) {
 				return opt.get();
@@ -47,14 +47,31 @@ public class VaccineCenterServiceimpl implements VaccineCenterService{
 
 	@Override
 	public VaccinationCenter updateVaccinationCenter(VaccinationCenter center) {
-		// TODO Auto-generated method stub
-		return null;
+		VaccinationCenter vaccinationcenter = Vcdao.getById(center.getCenterCcode());
+		
+		if(vaccinationcenter==null) {
+			throw new CenterException("Center Not Found");
+		}
+		else {
+		
+		VaccinationCenter updatedvaccinecenter = Vcdao.save(center);
+		return updatedvaccinecenter;
+		}
+		
 	}
 
 	@Override
-	public boolean deleteVaccinatioinCenter(VaccinationCenter center) {
-		// TODO Auto-generated method stub
-		return false;
+	public Boolean deleteVaccinatioinCenter(VaccinationCenter center) {
+		Boolean b= false;
+		VaccinationCenter vaccinationcenter = Vcdao.getById(center.getCenterCcode());
+		
+		if(vaccinationcenter==null) {
+			throw new CenterException("Center Not Found");
+		}
+		else {
+		 Vcdao.delete(vaccinationcenter);
+		return true;
+		}
 	}
 
 }

@@ -15,13 +15,13 @@ public class VaccineRegistrationServiceimpl implements VaccineRegistrationServic
 	}
 
 	@Override
-	public VaccinationRegistration getVaccineRegistration(long mobileno) {
+	public VaccinationRegistration getVaccineRegistration(Long mobileno) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Member> getAllMember(long mobileno) {
+	public List<Member> getAllMember(Long mobileno) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -39,7 +39,7 @@ public class VaccineRegistrationServiceimpl implements VaccineRegistrationServic
 	}
 
 	@Override
-	public boolean deleteVaccineRegistration(VaccinationRegistration vaccineregistration) {
+	public Boolean deleteVaccineRegistration(VaccinationRegistration vaccineregistration) {
 		// TODO Auto-generated method stub
 		return false;
 	}
