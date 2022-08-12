@@ -1,4 +1,4 @@
-package com.covidapp.servicelayer;
+package com.covidapp.servicelayer.Impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.covidapp.exceptionhandler.CenterException;
 import com.covidapp.module.VaccinationCenter;
 import com.covidapp.repository.VaccineCenterDao;
+import com.covidapp.servicelayer.VaccineCenterService;
 @Service
 public class VaccineCenterServiceimpl implements VaccineCenterService{
 	@Autowired

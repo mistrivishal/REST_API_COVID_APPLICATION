@@ -1,10 +1,11 @@
-package com.covidapp.servicelayer;
+package com.covidapp.servicelayer.Impl;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 import com.covidapp.module.Vaccine;
 import com.covidapp.module.VaccineInventory;
+import com.covidapp.servicelayer.VaccineInventoryService;
 
 public class VaccineInventoryServiceimpl implements VaccineInventoryService{
 
