@@ -16,7 +16,7 @@ public class VaccineInventoryServiceimpl implements VaccineInventoryService{
 	}
 
 	@Override
-	public VaccineInventory getVaccineInventorybyCenter(int code) {
+	public VaccineInventory getVaccineInventorybyCenter(Integer code) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -34,7 +34,7 @@ public class VaccineInventoryServiceimpl implements VaccineInventoryService{
 	}
 
 	@Override
-	public boolean deleteVaccineInventory(VaccineInventory vaccineinventory) {
+	public Boolean deleteVaccineInventory(VaccineInventory vaccineinventory) {
 		// TODO Auto-generated method stub
 		return false;
 	}
