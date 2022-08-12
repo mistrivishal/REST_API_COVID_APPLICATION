@@ -8,6 +8,7 @@ import javax.swing.text.html.Option;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.covidapp.exceptionhandler.CenterException;
 import com.covidapp.module.VaccinationCenter;
 import com.covidapp.repository.VaccineCenterDao;
 import com.covidapp.servicelayer.VaccineCenterService;
