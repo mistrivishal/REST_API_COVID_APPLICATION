@@ -8,12 +8,12 @@ public interface VaccineCenterService {
 		
 	public List<VaccinationCenter> allVaccineCenters();
 	
-	public VaccinationCenter getVaccinationCenter(int  code);
+	public VaccinationCenter getVaccinationCenter(Integer  code);
 	
 	public  VaccinationCenter addVaccinationCenter(VaccinationCenter center);
 	
 	public VaccinationCenter updateVaccinationCenter(VaccinationCenter center);
 	
-	public boolean deleteVaccinatioinCenter(VaccinationCenter center);
+	public Boolean deleteVaccinatioinCenter(VaccinationCenter center);
 	
 }

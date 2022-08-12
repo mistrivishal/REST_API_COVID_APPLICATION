@@ -10,13 +10,13 @@ public interface VaccineInventoryService {
 
 	public List<VaccineInventory> allVaccineInventory();
 	
-	public VaccineInventory getVaccineInventorybyCenter(int code);
+	public VaccineInventory getVaccineInventorybyCenter(Integer code);
 	
 	public VaccineInventory addVaccineCount(VaccineInventory vaccineinventory);
 	
 	public VaccineInventory updateVaccineInventory(VaccineInventory vaccineinventory);
 	
-	public boolean deleteVaccineInventory(VaccineInventory vaccineinventory);
+	public Boolean deleteVaccineInventory(VaccineInventory vaccineinventory);
 	
 	public List<VaccineInventory> getVaccineInventoryByDate(LocalDateTime date);
 	
