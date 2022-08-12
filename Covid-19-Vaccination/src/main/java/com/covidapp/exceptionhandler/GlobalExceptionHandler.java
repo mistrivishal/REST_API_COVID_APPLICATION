@@ -18,85 +18,80 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<MyErrorDetails> myExpHandlerMain(Exception ex, WebRequest wr) {
-		
-		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(),
-												ex.getMessage(),
-												wr.getDescription(false));
-		
+
+		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), ex.getMessage(), wr.getDescription(false));
+
 		return new ResponseEntity<MyErrorDetails>(err, HttpStatus.BAD_REQUEST);
 	}
-	
+
 	@ExceptionHandler(RollbackException.class)
 	public ResponseEntity<MyErrorDetails> handleRollbackException(Exception exp, WebRequest req) {
-		
+
 		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(),
-												"Improper arguments passed in jason. Validation failed!",
-												req.getDescription(false));
+				"Improper arguments passed in jason. Validation failed!", req.getDescription(false));
 
 		return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
 	}
-	
+
 	@ExceptionHandler(NoHandlerFoundException.class)
 	public ResponseEntity<MyErrorDetails> mynotFoundHandler(NoHandlerFoundException nfe, WebRequest req) {
-		
-		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), nfe.getMessage(),req.getDescription(false));
-		
+
+		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), nfe.getMessage(), req.getDescription(false));
+
 		return new ResponseEntity<>(err, HttpStatus.NOT_FOUND);
 
 	}
-	
+
 	@ExceptionHandler(MethodArgumentNotValidException.class)
-	public ResponseEntity<MyErrorDetails> methodArgumentNotValidException(MethodArgumentNotValidException manv,	WebRequest wr) {
-		
+	public ResponseEntity<MyErrorDetails> methodArgumentNotValidException(MethodArgumentNotValidException manv,
+			WebRequest wr) {
+
 		String message = manv.getBindingResult().getFieldError().getDefaultMessage();
-		
-		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), message,wr.getDescription(false));
-		
+
+		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), message, wr.getDescription(false));
+
 		return new ResponseEntity<>(err, HttpStatus.FORBIDDEN);
 	}
-	
+
 	@ExceptionHandler(ConstraintViolationException.class)
 	public ResponseEntity<MyErrorDetails> handleValidationException(Exception exp, WebRequest req) {
-		
+
 		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(),
-												"Improper arguments passed in json. Validation failed",	
-												req.getDescription(false));
+				"Improper arguments passed in json. Validation failed", req.getDescription(false));
 
 		return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
 	}
-	
+
 	@ExceptionHandler(CenterException.class)
 	public ResponseEntity<MyErrorDetails> centerException(CenterException cexp, WebRequest req) {
-		
-		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(),
-									cexp.getMessage(),
-									req.getDescription(false));
+
+		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), cexp.getMessage(), req.getDescription(false));
 
 		return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
 	}
-	
+
 	@ExceptionHandler(MemberNotFoundException.class)
 	public ResponseEntity<MyErrorDetails> memberNotFoundException(MemberNotFoundException mexp, WebRequest req) {
-		
-		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(),mexp.getMessage(),req.getDescription(false));
+
+		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), mexp.getMessage(), req.getDescription(false));
 
 		return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
 	}
-	
+
 	@ExceptionHandler(IdCardNotFoundException.class)
 	public ResponseEntity<MyErrorDetails> IdCardNotFoundException(IdCardNotFoundException idexp, WebRequest req) {
-		
-		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(),idexp.getMessage(), req.getDescription(false));
+
+		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), idexp.getMessage(), req.getDescription(false));
 
 		return new ResponseEntity<>(err, HttpStatus.NOT_FOUND);
 	}
-	
+
 	@ExceptionHandler(DuplicateIdException.class)
 	public ResponseEntity<MyErrorDetails> DuplicateIdException(DuplicateIdException duexp, WebRequest req) {
-		
-		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(),duexp.getMessage(), req.getDescription(false));
+
+		MyErrorDetails err = new MyErrorDetails(LocalDateTime.now(), duexp.getMessage(), req.getDescription(false));
 
 		return new ResponseEntity<>(err, HttpStatus.BAD_REQUEST);
 	}
-	
+
 }

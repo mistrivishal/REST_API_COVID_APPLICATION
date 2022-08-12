@@ -1,11 +1,12 @@
 package com.covidapp.servicelayer.Impl;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.covidapp.exceptionhandler.DuplicateIdException;
+import com.covidapp.exceptionhandler.IdCardNotFoundException;
 import com.covidapp.module.AdharCard;
 import com.covidapp.module.IdCard;
 import com.covidapp.module.PanCard;
@@ -55,7 +56,7 @@ public class IdCardServiceImpl implements IdCardService {
 			}
 		}
 
-		idDao.save(idCard);
+		return idDao.save(idCard);
 
 	}
 
