@@ -60,8 +60,16 @@ public class VaccineCenterServiceImpl implements VaccineCenterService {
 
 	@Override
 	public Boolean deleteVaccinatioinCenter(VaccinationCenter center) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		Optional<VaccinationCenter> opt = Vcdao.findById(center.getCenterCcode());
+		
+		if(opt.isEmpty()) {
+			throw new CenterException("Center not found");
+		}
+		else {
+			Vcdao.delete(center);
+			return true;
+		}
 	}
 
 }
