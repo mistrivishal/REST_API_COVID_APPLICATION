@@ -62,14 +62,28 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
+	public Member getMemberByPanNo(String panNo) {
+
+		List<Member> members = mDao.findAll();
+
+		for (Member member : members) {
+
+			if (member.getIdcard().getPan().getPanNo() == panNo) {
+				return member;
+			}
+		}
+
+		throw new MemberNotFoundException("No member found with ID-Card having Id: " + panNo);
+	}
+	
+	@Override
 	public Member addMember(Member member) {
 
 		List<Member> members = mDao.findAll();
 
 		for (Member mem : members) {
 			if (member.getIdcard().getAdhar().getAdharNo() == mem.getIdcard().getAdhar().getAdharNo()) {
-				throw new DuplicateIdException(
-						"Member Already Exists with adharNo:" + member.getIdcard().getAdhar().getAdharNo());
+				throw new DuplicateIdException("Member Already Exists with adharNo:" + member.getIdcard().getAdhar().getAdharNo());
 			}
 		}
 

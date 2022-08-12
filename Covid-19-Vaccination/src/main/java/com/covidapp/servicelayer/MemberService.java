@@ -13,9 +13,12 @@ public interface MemberService {
 
 	public Member getMemberByAdharNo(Long adharNo) throws MemberNotFoundException;
 
+	public Member getMemberByPanNo(String panNo) throws MemberNotFoundException;
+
 	public Member addMember(Member member) throws MemberNotFoundException;
 
 	public Member updateMember(Member member) throws MemberNotFoundException;
 
 	public Boolean deleteMember(Member member) throws MemberNotFoundException;
+
 }
