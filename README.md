@@ -132,7 +132,7 @@ http://localhost:8080/user/register
 - [Vishal Mistri](https://www.github.com/mistrivishal)
 - [Shivam Rajput](https://www.github.com/CodingShivam)
 - [Sanjay Kushwaha](https://www.github.com/kushites)
-- [Shubham Sing Bhadouria](https://www.github.com/Shubhambhadouria)
+- [Shubham Singh Bhadouria](https://www.github.com/Shubhambhadouria)
 
 # Tech Stack
 - Java
