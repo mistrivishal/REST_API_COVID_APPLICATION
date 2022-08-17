@@ -79,7 +79,7 @@ POST
 
 ### Request URI
 ```
-http://localhost:8080/customer/create
+http://localhost:8080/user/register
 ```
 
 ### Request Body
