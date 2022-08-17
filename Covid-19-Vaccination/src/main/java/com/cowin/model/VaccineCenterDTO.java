@@ -1,5 +1,7 @@
 package com.cowin.model;
 
+import com.cowin.utils.Address;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

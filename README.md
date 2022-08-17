@@ -2,6 +2,10 @@
 
 This web application will facilitate the citizen with an option to register and schedule the vaccination session online in Centers of their choice. The Citizen self-registration module will ensure fool-proof identification of deserving candidates for receiving the vaccines.
 
+# 💡 UML Vaccination
+
+![Image](https://lucid.app/lucidchart/d73bbd70-cdfb-4443-8adc-61baa01d5c24/edit?invitationId=inv_ee83b80d-13ae-4cf2-a7ad-3c9b0770c8f0#)
+
 # Features
 
 - Data Authentication and Validation for all the users (Admin and Member)
