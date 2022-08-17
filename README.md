@@ -125,7 +125,7 @@ http://localhost:8080/customer/create
 # Collaborators
 
 - [Vishal Mistri](https://www.github.com/mistrivishal)
-- [Shivam](https://www.github.com/CodingShivam)
+- [Shivam Rajput](https://www.github.com/CodingShivam)
 - [Sanjay Kushwaha](https://www.github.com/kushites)
 - [Shubham Sing Bhadouria](https://www.github.com/Shubhambhadouria)
 
