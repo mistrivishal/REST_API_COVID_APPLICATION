@@ -70,7 +70,8 @@ http://localhost:8080/swagger-ui/
 | `POST` | `Center By Id` | `http://localhost:8080/admin/getcenterbyid` | Get Center details by center ID |
 
 
-# Sample API Response for Customer Account Creation
+# Sample API response - Member Registeration
+
 ### Request Type
 ```
 POST
