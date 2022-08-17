@@ -129,7 +129,7 @@ http://localhost:8080/user/register
 - [Sanjay Kushwaha](https://www.github.com/kushites)
 - [Shubham Sing Bhadouria](https://www.github.com/Shubhambhadouria)
 
-# - Tech Stack
+# Tech Stack
 - Java
 - Hibernate
 - Spring Framework
