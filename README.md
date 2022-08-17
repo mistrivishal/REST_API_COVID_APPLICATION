@@ -1,27 +1,28 @@
 # REST API - COVID APLLICATON
 
-This application will facilitate the citizen with an option to register and schedule the vaccination session online in Centers of their choice. The Citizen self-registration module will ensure fool-proof identification of deserving candidates for receiving the vaccines.
+This web application will facilitate the citizen with an option to register and schedule the vaccination session online in Centers of their choice. The Citizen self-registration module will ensure fool-proof identification of deserving candidates for receiving the vaccines.
 
 # Features
 
 - Data Authentication and Validation for all the users (Admin and Member)
 - REST API documentation using swagger puglins
 
-## Admin Features
+## Admin API Features
 
 - Admin can access all the information of vaccination centers and Member Information.
 - Admin can access perform all CRUD operation related to vaccination center and members as well.
 
-## Customer Features
+## Member API Features
 
-- Customer can login in the application and update their information using their username and password.
-- Customer can book trips using pickup location and destination.
-- Customer can access the bill after the trip is completed.
+- Member can login in the application and update their information using their username, password and Adharcard.
+- Member can search for the vaccination center nearby and bookthe appoinment for the same.
+- Member can able to register five family members on one mobile number and track theere vaccination details.
+- Member can get all the appointments details mapped with mobile number.
 
 # Installation & Run
 
 - Before running the API server, you should update the database config inside the application.properties file.
-- Update the port number, username and password as per your local database configuration.
+- Update the port number, MySQL database username and password as per your local database configuration.
 
 ```
     server.port=8080
