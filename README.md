@@ -4,7 +4,7 @@ This web application will facilitate the citizen with an option to register and 
 
 # 💡 UML Vaccination
 
-![Image](https://lucid.app/lucidchart/d73bbd70-cdfb-4443-8adc-61baa01d5c24/edit?invitationId=inv_ee83b80d-13ae-4cf2-a7ad-3c9b0770c8f0#.svg)
+![Alt text here](Covid%20Vaccination%20UML.svg)
 
 # Features
 
