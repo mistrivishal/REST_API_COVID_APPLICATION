@@ -6,7 +6,6 @@ This application will facilitate the citizen with an option to register and sche
 
 - Data Authentication and Validation for all the users (Admin and Member)
 - REST API documentation using swagger puglins
-- 
 
 ## Admin Features
 
