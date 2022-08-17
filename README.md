@@ -125,7 +125,7 @@ http://localhost:8080/user/register
 
 ```
 
-### This is a collaborative project, completed by a team of 5 backend developers at Masai School.
+### This is a collaborative project, completed by a team of 4 backend developers at Masai School.
 
 # Collaborators
 
