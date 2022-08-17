@@ -34,7 +34,7 @@ public class VaccineCenterAdmin {
 		return new ResponseEntity<VaccineCenter>(center, HttpStatus.CREATED);
 	}
 
-	@PutMapping("/update")
+	@PutMapping("/updatecenter")
 	public ResponseEntity<VaccineCenter> updateVaccinecenter(@Valid @RequestBody VaccineCenter vac) {
 
 		VaccineCenter center = vaccinecenterservice.updateVaccineCenter(vac);
@@ -57,7 +57,7 @@ public class VaccineCenterAdmin {
 				HttpStatus.OK);
 	}
 
-	@GetMapping("/centers")
+	@GetMapping("/allcenters")
 	public ResponseEntity<List<VaccineCenter>> getVaccinecenter() {
 
 		List<VaccineCenter> centers = vaccinecenterservice.getAllVaccineCenter();
