@@ -42,7 +42,7 @@ This web application will facilitate the citizen with an option to register and 
 https://localhost:8080/
 ```
 ```
-http://localhost:8080/swagger-ui/
+http://localhost:8080/swagger-ui/index.html
 ```
 # API References
 
